@@ -4,7 +4,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
 ## Visual Abstract
-![Visual Abstract](assets/images/visual_abstract.png) 
+![Visual Abstract](PromptLightJisa.png) 
 *(Replace the path above with the actual path to your visual abstract image in the repo)*
 
 ## Abstract
