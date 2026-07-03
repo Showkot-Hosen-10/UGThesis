@@ -27,11 +27,6 @@ PromptLight chains four layers to balance security and performance:
 3. **L2 ALBERT-base-v2:** Fine-tuned transformer for robust semantic detection.
 4. **L3 SHAP Audit:** Token-level attribution trace for explainable security decisions.
 
-## Repository Contents
-* `checkpoints/`: HuggingFace fine-tuned model weights.
-* `dashboard/`: Flask-based SOC dashboard for real-time inference and visualization.
-* `benchmark/`: Test scripts for paired deployment-condition prompts.
-
 ## Citation
 If you use this research or code in your work, please cite:
 ```bibtex
