@@ -5,12 +5,30 @@
 
 ## Visual Abstract
 ![Visual Abstract](PromptLightJISA.png) 
-*(Replace the path above with the actual path to your visual abstract image in the repo)*
+
 
 ## Abstract
-Prompt injection now tops the OWASP vulnerability list for LLM-integrated applications, yet most defences are either opaque single classifiers or multistage pipelines too heavy for real-time use. We present **PromptLight**, a four-layer cascade—input normaliser, regex screen, fine-tuned ALBERT classifier, and phrase-level SHAP audit—built for live CPU deployment. 
-
-On 406 deployment-condition prompts, the cascade reaches 92.86% accuracy and F1 = 0.930, cutting the false-negative rate from 17.31% to 7.21%. Head-to-head against ProtectAI DeBERTa-v3, our fine-tuned ALBERT is statistically indistinguishable in decision quality at 16× fewer parameters. The complete pipeline runs under 10ms per request on commodity hardware.
+Prompt injection now tops the OWASP vulnerability list for LLM-integrated
+applications, yet most defences are either opaque single classiers or multistage pipelines too heavy for real-time use. We ask a simple question: can
+one lightweight, explainable system close every gap at once? We present
+PromptLight, a four-layer cascade  input normaliser, regex screen, netuned ALBERT classier, and phrase-level SHAP audit  built for live
+CPU deployment. Selecting among eight candidate models trained on a
+fused corpus of 8,664 labelled prompts, we choose ALBERT-base-v2 not for
+clean accuracy (where it ranks fourth) but for adversarial stability: only
++2.11 percentage-point false-negative-rate degradation under six obfuscation
+classes, against +72.24 pp for the clean-data leader LinearSVM. On 406
+deployment-condition prompts the cascade reaches 92.86% accuracy and
+F1 = 0.930, cutting the false-negative rate from 17.31% to 7.21%  a gain con-
+rmed signicant at McNemar χ
+2 = 5.45, p = 0.020. Head-to-head against
+ProtectAI DeBERTa-v3, ne-tuned ALBERT is statistically indistinguishable in decision quality at 16× fewer parameters, while the full cascade significantly outperforms it. We also characterise an ambiguous-vocabulary falsepositive problem and propose a dual-AUC reporting convention  raw production AUC alongside clean-subset AUC  as a methodological safeguard.
+The complete pipeline runs under 10 ms per request on commodity hardware
+and is released as two HuggingFace checkpoints and a deployable Flask SOC
+dashboard.
+## Keywords: 
+Prompt injection, Lightweight transformer, Adversarial
+robustness, Explainable AI, Cascade detection, ALBERT, SHAP,
+Benchmark-to-deployment gap
 
 ## Key Highlights
 * **Robust Benchmark:** Eight-model lightweight benchmark with paired adversarial-robustness evaluation across six obfuscation classes.
