@@ -19,9 +19,9 @@ clean accuracy (where it ranks fourth) but for adversarial stability: only
 classes, against +72.24 pp for the clean-data leader LinearSVM. On 406
 deployment-condition prompts the cascade reaches 92.86% accuracy and
 F1 = 0.930, cutting the false-negative rate from 17.31% to 7.21% - a gain con-
-rmed significant at McNemar χ
+firmed significant at McNemar χ
 2 = 5.45, p = 0.020. Head-to-head against
-ProtectAI DeBERTa-v3, fine-tuned ALBERT is statistically indistinguishable in decision quality at 16× fewer parameters, while the full cascade significantly outperforms it. We also characterise an ambiguous-vocabulary falsepositive problem and propose a dual-AUC reporting convention - raw production AUC alongside clean-subset AUC  as a methodological safeguard.
+ProtectAI DeBERTa-v3, fine-tuned ALBERT is statistically indistinguishable in decision quality at 16× fewer parameters, while the full cascade significantly outperforms it. We also characterise an ambiguous-vocabulary falsepositive problem and propose a dual-AUC reporting convention - raw production AUC alongside clean-subset AUC - as a methodological safeguard.
 The complete pipeline runs under 10 ms per request on commodity hardware
 and is released as two HuggingFace checkpoints and a deployable Flask SOC
 dashboard.
